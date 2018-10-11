@@ -4,17 +4,23 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int a;
-	int f; 
-	printf("정수 하나를 입력하시오 : ");
-	scanf("%i",&a);
 	
-	if (a<0)
-	   f=-a;
+	char a;
+	
+	printf("input a char : ");
+	scanf("%c",&a);
+	
+	if('A' <= a && a <= 'Z')
+	  printf("대문자입니다.");
+	
+	else if('a' <= a && a <= 'z')
+	  printf("소문자입니다."); 
+	
+	else if('0' <= a && a <='9')
+	  printf("숫자입니다.");
+	
 	else
-	   f=a;
-	
-	printf("절댓값은 %i 입니다.",f);
+	  printf("기타 글자입니다.");
 	   
 	   
 	return 0;
